@@ -1,0 +1,160 @@
+import tkinter
+from tkinter.filedialog import askopenfilename
+filename = askopenfilename()
+import os
+cwd = os.getcwd()
+print(cwd)
+newdir = cwd + '/' + 'data'
+os.makedirs(newdir)
+print(newdir)
+os.makedirs(newdir)
+if not os.path.exists(newdir):
+    os.makedirs(newdir)
+os.getcwd()
+os.chdir(newdir)
+os.getcwd()
+try1 = open("testfile.txt", "w")
+print('Pierre, Einstein, and Planck', file= try1)
+try1.close()
+cat testfile.txt
+try1 = open("testfile.txt", "w")
+print('Marie, Maria and Dorothy', file= try1)
+try1.close()
+cat testfile.txt
+os.getcwd()
+os.chdir('/mnt/disk/AA_PC_Stockholm/Education/Python_programming/2018/lectures/Filehandling_2/')
+os.getcwd()
+cat Collaborators
+F=open('Collaborators', 'r')
+lines= F.readlines()
+F.close()
+import re
+tot_value=0
+for i in range(len(lines)):
+    searched_words = re.search('has (.+) fte', lines[i])
+    if search_words is None:
+        print('Error in sentence')
+        exit()
+    svalue = searched_words.group(1)
+    value = float(svalue)
+    tot_value = tot_value + value
+for i in range(len(lines)):
+    searched_words = re.search('has (.+) fte', lines[i])
+    if searched_words is None:
+        print('Error in sentence')
+        exit()
+    svalue = searched_words.group(1)
+    value = float(svalue)
+    tot_value = tot_value + value
+print(tot_value)
+for i in range(len(lines)):
+    searched_words = re.search('has (.+) fte', lines[i])
+    if searched_words is None:
+        print('Error in sentence')
+        exit()
+    print(searched_words)
+    svalue = searched_words.group(1)
+    value = float(svalue)
+    tot_value = tot_value + value
+import tkinter
+from tkinter.filedialog import askopenfilename
+filename = askopenfilename()
+F=open(filename, 'r')
+lines = F.readlines()
+F.close
+F.close()
+for i in [2,3,4]:
+    print(i)
+for i in enumerate([2,3,4]):
+    print(i)
+for i,x in enumerate([2,3,4]):
+    print(i)
+    print(x)
+Tlist=[]
+location1=[i for i,x in enumerate(lines) if ('Temperature' in x) and ('Kelvin' in x) and ('Pressure' in x) and ('Atm' in x)]
+print(location1)
+print(lines[46131])
+for i in location1:
+    foundstring = lines[i]
+    value=float(foundstring.split()[1])
+    Tlist.append(value)
+Glist=[]
+location1=[i for i,x in enumerate(lines) if ('Sum of electronic and thermal Free Energies' in x) ]
+location2=[i for i,x in enumerate(lines) if ('Sum of electronic and thermal Free Energies' in x) ]
+for i in location2:
+    foundstring = lines[i]
+    value=float(foundstring.split()[7])
+    Glist.append(value)
+for i in [2,3,4]:
+    print(i)
+for i in len([2,3,4]):
+    print(i)
+len([2,3,4])
+for i in range(len([2,3,4])):
+    print(i)
+relativelist=[]
+minvalue=min(x for x in Glist)
+print(minvalue)
+for i in range(len(Glist)):
+    j=Glist[i]
+    inkcalmol=(j-minvalue)*627.5095
+    relativelist.append(inkcalmol)
+alldata=[Tlist,Glist,relativelist]
+alldata
+numbers= [1,2,3]
+letters= ['a', 'b', 'c']
+ziplist=[numbers,letters]
+print(ziplist)
+print(*ziplist)
+print(zip(*ziplist))
+list(zip(*ziplist))
+def qua(x):
+    return x**2
+list(map(qua,[4,5,6]))
+list_tup=[(4,5),(6,7)]
+list(map(list,list_tup))
+ziptransposed=list(map(list,zip(*alldata)))
+ziptransposed
+newdir
+os.chdir(newdir)
+outfile="data_molecule"
+Wf=open(outfile,'w')
+matrix_ex = [[1,2,3],[4,5,6]]
+for x in matrix_ex:
+    print(x)
+for x in matrix_ex:
+    print(' '.join(str(x[i]) for x in matrix_ex))
+for x in matrix_ex:
+    print(' '.join(str(x) for x in matrix_ex))
+for x in matrix_ex:
+    print(' '.join(str(x[i]) for i in range(len(x))))
+for x in ziptransposed:
+    Wf.write(' '.join(str(x[i]) for i in range(len(x))))
+    wf.write('\n')
+for x in ziptransposed:
+    Wf.write(' '.join(str(x[i]) for i in range(len(x))))
+    Wf.write('\n')
+Wf.close()
+cat data_molecule
+for x in ziptransposed:
+    Wf.write(' '.join(str(round(x[i],3)) for i in range(len(x))))
+    Wf.write('\n')
+open('data_molecule', 'w')
+Wf=open(outfile,'w')
+for x in ziptransposed:
+    Wf.write(' '.join(str(round(x[i],3)) for i in range(len(x))))
+    Wf.write('\n')
+Wf.close()
+os.getcwd()
+cat data_molecule
+import tkinter
+from tkinter import *
+root = tkinter.Tk()
+root
+root.mainloop()
+w=Label(root,text="Hello, it is late, you should go to bed - or you should join our drinking")
+root = tkinter.Tk()
+w=Label(root,text="Hello, it is late, you should go to bed - or you should join our drinking")
+w.pack()
+root.mainloop()
+%history -f The_lesson_of_today
